@@ -8,31 +8,37 @@
     <script defer src="script.js"></script>
   </head>
   <body>
-    <div id="resultArea">1234</div>
+    <div id="resultArea"></div>
     <table>
       <tr>
-        <td>7</td>
-        <td>8</td>
-        <td>9</td>
-        <td class="highlight">/</td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td onclick="deleteLast()">AC</td>
       </tr>
       <tr>
-        <td>4</td>
-        <td>5</td>
-        <td>6</td>
-        <td class="highlight">x</td>
+        <td onclick="appendOperation(7)">7</td>
+        <td onclick="appendOperation(8)">8</td>
+        <td onclick="appendOperation(9)">9</td>
+        <td class="highlight" onclick="appendOperation(' / ')">/</td>
       </tr>
       <tr>
-        <td>1</td>
-        <td>2</td>
-        <td>3</td>
-        <td class="highlight">-</td>
+        <td onclick="appendOperation(4)">4</td>
+        <td onclick="appendOperation(5)">5</td>
+        <td onclick="appendOperation(6)">6</td>
+        <td class="highlight" onclick="appendOperation(' * ')">*</td>
       </tr>
       <tr>
-        <td>0</td>
-        <td>.</td>
-        <td id="result">=</td>
-        <td class="highlight">+</td>
+        <td onclick="appendOperation(1)">1</td>
+        <td onclick="appendOperation(2)">2</td>
+        <td onclick="appendOperation(3)">3</td>
+        <td class="highlight" onclick="appendOperation(' - ')">-</td>
+      </tr>
+      <tr>
+        <td onclick="appendOperation(0)">0</td>
+        <td onclick="appendOperation(',')">,</td>
+        <td onclick="calculateResult()" id="result">=</td>
+        <td class="highlight" onclick="appendOperation(' + ')">+</td>
       </tr>
     </table>
   </body>
